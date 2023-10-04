@@ -8,6 +8,12 @@ for (let i = 0; i < 16; i++) {
 
         square.addEventListener("mouseover", () => {
             square.classList.add("drawn");
+            let maxVal = 0xFFFFFF; // 16777215
+            let randomNumber = Math.random() * maxVal; 
+            randomNumber = Math.floor(randomNumber);
+            randomNumber = randomNumber.toString(16);
+            let randColor = "#" + randomNumber.padStart(6, 0);   
+            square.style.backgroundColor = randColor
         });
         container.appendChild(square);
     };
@@ -33,6 +39,12 @@ reset.addEventListener("click", () => {
     
             square.addEventListener("mouseover", () => {
                 square.classList.add("drawn");
+                let maxVal = 0xFFFFFF; // 16777215
+                let randomNumber = Math.random() * maxVal; 
+                randomNumber = Math.floor(randomNumber);
+                randomNumber = randomNumber.toString(16);
+                let randColor = "#" + randomNumber.padStart(6, 0);   
+                square.style.backgroundColor = randColor
             });
 
             container.appendChild(square);
