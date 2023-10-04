@@ -9,6 +9,6 @@ for (let i = 0; i < 16; i++) {
 };
 
 
-square.addEvenlistener("mouseover", () => {
-    square.id = "drawn"
+square.addEventlistener("mouseover", () => {
+    square.classList.add("drawn");
 })
